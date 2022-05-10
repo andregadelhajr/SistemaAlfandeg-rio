@@ -36,16 +36,17 @@ namespace ProvaTecnica2_WF
                 {
                     form1.btnMigrante.Enabled = true;
                     form1.btnFuncionario.Enabled = true;
-                    telaLogin.Close();
+                    //telaLogin.Close();
                     form1.Show();
                 }
                 else if (usuario == funcionarios.Nome && senha == funcionarios.Senha)
                 {
                     form1.btnMigrante.Enabled = true;
                     form1.btnFuncionario.Enabled = false;
+                    //this.Close();
                     form1.ShowDialog();
                 }
-
+                telaLogin.Close();
             }
         }
     }

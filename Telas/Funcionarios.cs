@@ -47,7 +47,7 @@ namespace ProvaTecnica2_WF.Telas
             int codigo = int.Parse(txtCodigo.Text);
             string nome = txtNome.Text;
 
-            //.Remove(codigo);
+            funcionarios.Remove(funcionarios.Find(x => x.Codigo == codigo));
 
             /*foreach (Funcionario func in funcionarios)
             {

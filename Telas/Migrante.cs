@@ -149,18 +149,22 @@ namespace ProvaTecnica2_WF.Telas
             string nome = txtNome.Text;
             string cpf = txtCpf.Text;
 
-            foreach (Migrantes migrante in migrantes)
+            //migrantes.RemoveAt(0);
+            migrantes.Remove(migrantes.Find(x => x.Codigo == codigo));
+            // migrantes.RemoveAll(x => x.Codigo == codigo);
+
+            /*foreach (Migrantes migrante in migrantes)
             {
                 if(migrante.Codigo == codigo)
                 {
-                    //migrantes.Remove(codigo);
+                    migrantes.Remove(codigo);
                 }
                 else
                 {
                     MessageBox.Show("Erro");
                 }
                 //migrante.Nome.Remove(codigo);
-            }
+            }*/
         }
     }
 }
